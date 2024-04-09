@@ -53,7 +53,7 @@ body {
   text-align: center;
   width: 600px;
   line-height: 1.5;
-  background-image: radial-gradient(circle, #fff0f9, #faebf9, #f3e7fb, #eae3fc, #dee0fe, #d0e2ff, #c0e4ff, #b1e6ff, #9dedff, #88f3ff, #75fafd, #6afff1);
+  background-image: linear-gradient(to top, #ff83e9, #ff8bd8, #ff95ca, #ffa0c1, #ffacbc, #ffb3b6, #ffbbb2, #ffc3b0, #ffcaa7, #ffd39e, #ffde97, #ffea92);
 }
 li {
   text-align: right;
@@ -88,3 +88,5 @@ font/color/font-size/line-height/text-align/text-transform/font-weight
 default is 16px = 1rem, rem scales texts accordingly */
 
 /* color properties: color/background-color/border-color/border */
+
+a:ho
