@@ -47,6 +47,7 @@ body {
   nav {
     border: 4px none rgba(229, 229, 203, 0.4);
     margin-bottom: 40px;
+    /* i wanted the user to be able to access the navigation bar at all times, so i used sticky so it could stick to the top as the user scrolls down the page */
     position: sticky;
     top: 0;
     /* padding: 2px 0; */
@@ -107,3 +108,7 @@ font-weight: 400;
 font-style: normal;
 }
 
+a {
+  /* i wanted to get rid of the underline in the link bc it didnt look coherent with my webpage so i set the text decoration to none  */
+  text-decoration: none;
+}
