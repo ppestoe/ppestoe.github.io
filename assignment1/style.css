@@ -1,6 +1,5 @@
 /* this is to center all of the content in the body section to the middle of the page */
 body {
-  background-color: #1a120b;
   /* display: flex; */
   text-align: center;
   margin: auto;
