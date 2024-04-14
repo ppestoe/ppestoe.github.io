@@ -77,30 +77,8 @@ body {
   /* li:nth-child(1) {
       flex-grow: 2;
     } */
-  
-  .portfolio {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
-  }
-  
-  .portfolio > img {
-    border-radius: 50%;
-    align-self: center;
-    justify-self: center;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    /* width: 150px;
-      height: 150px; */
-  }
-  
-  .portfolio > img:nth-child(6) {
-    grid-column: 1/3;
-    grid-row: 1/3;
-  }
 
+    /* the font was found in Adobe fonts, because I wanted a pixelated font to match the background, and google fonts didnt have any easily comprehensible ones available, so i resorted to Adobe fonts  */
 .PF Videotext Regular {
 font-family: "pf-videotext", sans-serif;
 font-weight: 400;
@@ -110,4 +88,14 @@ font-style: normal;
 a {
   /* i wanted to get rid of the underline in the link bc it didnt look coherent with my webpage so i set the text decoration to none  */
   text-decoration: none;
+}
+
+div {
+  display: flex;
+}
+/* styling of the planet gifs  */
+#planet {
+  height: 50px;
+  display: flex;
+  justify-content: center;
 }
