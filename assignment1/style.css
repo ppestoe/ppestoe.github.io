@@ -1,11 +1,8 @@
 /* this is to center all of the content in the body section to the middle of the page */
 body {
-  /* display: flex; */
   text-align: center;
   margin: auto;
   max-width: 1000px;
-  /* justify-content: center; */
-  /* align-items: flex-start; */
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -16,31 +13,37 @@ body {
   header {
     padding: 2rem 0;
   }
-  
+   /* styling of the texts  */
   h1 {
-    font-size: 4rem;
+    font-size: 6rem;
     font-family: "pf-videotext";
+    /* added a slight boarder around all of the texts making it easier to read  */
+    text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
   
   h2 {
-    font-size: 3rem;
+    font-size: 5rem;
     font-family: "pf-videotext";
+    text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: 4rem;
     font-family: "pf-videotext";
+    text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
 
   h4 {
-    font-size: 1rem;
+    font-size: 3rem;
     font-family: "pf-videotext";
+    text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
 
   h5 {
-    font-size: 1rem;
-    color: hsla(238, 100%, 94%, 0.829);
+    font-size: 2rem;
+    color: hsl(212, 55%, 71%);
     font-family: "pf-videotext";
+    text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
 
   nav {
@@ -49,13 +52,13 @@ body {
     /* i wanted the user to be able to access the navigation bar at all times, so i used sticky so it could stick to the top as the user scrolls down the page */
     position: sticky;
     top: 0;
-    /* padding: 2px 0; */
   }
-  
+  /* i wanted the buttons to change colours as i hovered  */
   ul li:hover {
     background-color: #8f93d459;
-  } 
 
+  } 
+  /* styling of the nav bar  */
   ul {
     margin: 0;
     padding: 0;
@@ -66,17 +69,11 @@ body {
     flex-direction: row;
     justify-content: center;
   }
-  
+  /* styling of the nav bar items */
   li {
-    /* flex: 1; */
     background-color: #16123a86;
-    /* flex-grow: 1; */
     padding: 0 10px;
   }
-  
-  /* li:nth-child(1) {
-      flex-grow: 2;
-    } */
 
     /* the font was found in Adobe fonts, because I wanted a pixelated font to match the background, and google fonts didnt have any easily comprehensible ones available, so i resorted to Adobe fonts  */
 .PF Videotext Regular {
@@ -89,13 +86,15 @@ a {
   /* i wanted to get rid of the underline in the link bc it didnt look coherent with my webpage so i set the text decoration to none  */
   text-decoration: none;
 }
-
+/* edited div to make all gifs centered  */
 div {
   display: flex;
-}
-/* styling of the planet gifs  */
-#planet {
-  height: 50px;
-  display: flex;
   justify-content: center;
-}
+  }
+  /* footer settings  */
+  .footer {
+    padding: 40px;
+    text-align: center;
+
+    margin-top: 40px;
+  }
