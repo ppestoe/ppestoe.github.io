@@ -60,7 +60,6 @@ body {
   
   .round {
     border-radius: 50%;
-    background-image: url("hq2.jpg");
   }
   
   a {
@@ -68,8 +67,8 @@ body {
     display: block;
   }
   
-  .purple-box {
-    background-color: rgb(153, 112, 186);
+  .blue-box {
+    background-color: rgb(157, 180, 231);
   }
   
   .coral-box {
@@ -83,4 +82,5 @@ body {
 
   h1 {
     font-size: 4rem;
+    padding-bottom: 20px;
   }

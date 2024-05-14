@@ -76,20 +76,28 @@ myButton.textContent = myImage.dataset.catname;
 //     }
 // }
 
-const myTitle = document.querySelector("h1");
-myTitle.textContent = "I am a new heading"; 
-let course = "up";
-const myImage = document.querySelector("#my-image");
-myTitle.innerHTML = `I am <span class="coral-box"> soup </span>`;
+// const myTitle = document.querySelector("h1");
+// myTitle.textContent = "I am a new heading"; 
+// let course = "up";
+// const myImage = document.querySelector("#my-image");
+// myTitle.innerHTML = `I am <span class="coral-box"> soup </span>`;
 
 
-myImage.addEventListener("mouseover", makeItRound);
-myImage.addEventListener("mouseout", makeItSquare);
+// myImage.addEventListener("mouseover", makeItRound);
+// myImage.addEventListener("mouseout", makeItSquare);
 
-function makeItRound(){
-    myImage.classList.add("round");
-}
+// function makeItRound(){
+//     myImage.classList.add("round");
+// }
 
-function makeItSquare(){
-    myImage.classList.remove("round");
-}
+// function makeItSquare(){
+//     myImage.classList.remove("round");
+// }
+
+
+
+
+// rock paper scissors game
+// math.floor(Math.random()*3)
+
+// us = 0 && cc = 2 = win
