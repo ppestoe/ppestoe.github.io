@@ -88,13 +88,12 @@ a {
 }
 /* edited div to make all gifs centered  */
 div {
-  display: flex;
+  display:flex;
   justify-content: center;
   }
   /* footer settings  */
   .footer {
     padding: 40px;
     text-align: center;
-
     margin-top: 40px;
   }
