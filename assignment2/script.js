@@ -8,13 +8,14 @@ const songList = [
   let loop = false;
 
   const songAudio = document.querySelector("#song-audio");
+
   const songName = document.querySelector("song-name");
 
 
 //   button controls 
 // --play pause button--
-const playPauseBtn = document.querySelector("play-pause-btn");
-const playPauseImg = document.querySelector("play-pause-img");
+const playPauseBtn = document.querySelector("#play-pause-btn");
+const playPauseImg = document.querySelector("#play-pause-img");
 playPauseBtn.addEventListener("click", togglePlay);
 
 function playSong(no) {
@@ -29,9 +30,21 @@ function playSong(no) {
   function togglePlay() {
     if(songAudio.paused|| songAudio.ended) {
         playPauseImg.src = "https://img.icons8.com/ios-glyphs/70/07421F/play--v1.png";
+        playPauseBtn.style.backgroundColor = "#83b895";
         songAudio.play()
     } else {
-        playPauseImg.src = "https://img.icons8.com/ios-glyphs/70/07421F/pause--v1.png"
+        playPauseImg.src = "https://img.icons8.com/ios-glyphs/70/9A155D/pause--v1.png"
+        playPauseBtn.style.backgroundColor = "pink";
         songAudio.pause();
     }
   }
+
+//   --progress bar--
+
+const progressBar = document.querySelector("#progress-bar-fill");
+songAudio.addEventListener("timeupdate", updateProgressBar);
+
+function updateProgressBar() {
+    const progress = (songAudio.currentTime / songAudio.duration) * 100;
+        progressBar.style.width = progress + "%";
+}

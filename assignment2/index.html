@@ -1,4 +1,4 @@
-
+<!-- All icons sourced from https://icons8.com-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,29 +15,38 @@
   <body>
     <!-- Header Section -->
     <header>
-      <h1>Media Player Website</h1>
+      <h1>✧.* Music Album *.✧ </h1>
     </header>
     <!-- Main Content Section -->
     <main class="container">
-      <h2>Now Playing:</h2>
-      <h3 id="song-title">The Apolocheese Cat</h3>
-      <!-- album cover Section -->
-      <img src="cover1.png" alt="cover-image" id="album-image">
-      <div class="album-cover">
+  
+    <!-- Song Title + audio -->
+      <div class="song-title">
+      <h2>Now Playing: <span id="song-name">The Apolocheese Cat</span>
 
+      </h2>
+
+      </div>
+      <div id="audio-container">
+        <audio id="song-audio" src="audio/the apolocheese (1).mp3"></audio>
+      </div>
+      <!-- album cover Section -->
+
+      <div class="album-cover">
+        <img src="cover1.png" alt="cover-image" class="album-image">
+
+      </div>
         <div class="custom-controls">
           
-          <button id="next-btn">
+          <button id="vol-down-btn">
             <img 
-            id="next-img"
-            width="30" 
-            height="30" 
-            src="https://img.icons8.com/ios-glyphs/60/07421F/end--v2.png" 
-            alt="end--v2"/>
+            id="vol-down-img" 
+            src="https://img.icons8.com/ios-glyphs/30/07421F/mute--v2.png"
+             alt="low-volume"/>
           </button>
-          <button id="next-btn">
+          <button id="prev-btn">
             <img 
-            id="next-img"
+            id="prev-img"
             width="30" 
             height="30" 
             src="https://img.icons8.com/ios-glyphs/60/07421F/skip-to-start--v2.png" 
@@ -46,7 +55,7 @@
           <button id="play-pause-btn">
             <img
               id="play-pause-img"
-              src="https://img.icons8.com/ios-glyphs/60/07421F/play--v1.png"
+              src="https://img.icons8.com/ios-glyphs/70/07421F/play--v1.png"
               alt="Play Button"
               width="70"
               height="70"
@@ -60,12 +69,12 @@
             src="https://img.icons8.com/ios-glyphs/60/07421F/end--v2.png" 
             alt="end--v2"/>
           </button>          
-          <button id="next-btn">
+          <button id="vol-up-btn">
             <img 
-            id="next-img"
+            id="vol-up-img"
             width="30" 
             height="30" 
-            src="https://img.icons8.com/ios-glyphs/60/07421F/end--v2.png" 
+            src="https://img.icons8.com/ios-glyphs/60/07421F/medium-volume.png"g" 
             alt="end--v2"/>
           </button>
 
@@ -79,21 +88,25 @@
         
       </div>
 
-      <!-- Additional Content Section -->
+      <!-- Song list Section -->
       <section>
-        <h2>Additional Content</h2>
-        <p>This is where you can showcase any other relevant content.</p>
-        <!-- Add more content as needed -->
+        <h2>Song List</h2>
+        <div class="album-list">
+          <img src="cover1.png" alt="cover-image" class="list-img">
+          <img src="cover2.png" alt="cover-image" class="list-img">
+          <img src="cover3.png" alt="cover-image" class="list-img">
+          <img src="cover4.jpg" alt="cover-image" class="list-img">
+        </div>
       </section>
     </main>
 
     <!-- Footer Section -->
     <footer>
-      <p>&copy; 2024 Media Player Website. All rights reserved.</p>
-      <a href="https://icons8.com/icon/59862/play">Play</a> icon by
-      <a href="https://icons8.com">Icons8</a>
-      <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
-      <a href="https://icons8.com">Icons8</a>
+      <p>&copy; 2024 Interactive Media Assignment 2. All rights reserved.</p>
+      <!-- <a href="https://icons8.com/icon/59862/play">Play</a> icon by
+      <a href="https://icons8.com">Icons8</a> -->
+      <!-- <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
+      <a href="https://icons8.com">Icons8</a> -->
     </footer>
   </body>
 </html>

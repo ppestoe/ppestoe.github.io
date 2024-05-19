@@ -1,8 +1,9 @@
 :root {
-    --primary-bg-color: #F2FFE9;
+  background-color: #F9FFFA;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 100 100'%3E%3Cg stroke='%233CCC53' stroke-width='0' %3E%3Crect fill='%23EAF5E9' x='-60' y='-60' width='114' height='240'/%3E%3C/g%3E%3C/svg%3E");
     --text-color: #04622a;
     --main-bg-color: #3a633a;
-    --main-text-color: #fff;
+    --main-text-color: #fff6f6;
     --main-btn-bg-color: #83b895;
   }
   
@@ -59,6 +60,7 @@
   
   /* Header styling */
   header {
+    font-family: "Patrick Hand" ;
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
     padding: 10px 0;
@@ -69,18 +71,33 @@
  
   /* Album cover styling */
 
-   #album-image {
+   .album-image {
     height: 300px;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 30px;
     border-radius: 5%;
-    border: 5px dashed #83b895;
-
-  
-
+    border: 5px inset #83b895;
 }
+.album-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.list-img {
+  height: 100px;
+  border-radius: 5%;
+  display: flex;
+  margin: auto;
+  border: 5px inset #83b895;
+}
+
   
+/* song name styling */
+  #song-name{
+    color: #f089c1;
+    padding-left: 10px;
+  }
   .custom-controls {
     display: flex;
     justify-content: space-between;
@@ -107,15 +124,16 @@
   .progress-bar {
     width: 100%;
     height: 10px;
-    background-color: #ddd;
+    background-color: #e9c8c89f;
     margin-top: 10px;
+    border: 3px double #f089c294;
     overflow: hidden;
   }
   
   .progress-bar span {
     display: block;
     height: 100%;
-    background-color: var(--main-bg-color);
+    background-color: #f089c294;
     width: 0;
     transition: width 0.3s ease;
   }
@@ -125,7 +143,6 @@
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
     text-align: center;
-    padding: 10px 0;
     width: 100%;
   }
 /* fonts */
