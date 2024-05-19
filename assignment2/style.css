@@ -1,13 +1,12 @@
 :root {
     --primary-bg-color: #F2FFE9;
-    --text-color: #333;
+    --text-color: #04622a;
     --main-bg-color: #3a633a;
     --main-text-color: #fff;
-    --main-btn-bg-color: #938989;
+    --main-btn-bg-color: #83b895;
   }
   
   body,
-  h1,
   p,
   ul {
     margin: 0;
@@ -15,18 +14,41 @@
   }
   
   body {
-    font-family: "Arial", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 400px;
     background-color: var(--primary-bg-color);
     color: var(--text-color);
-    line-height: 5;
+    line-height: 4;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
+  }
+
+  h1 {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+
+  h2 {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-size: large;
   }
   
-  /* Add additional styles as needed */
+  h3 {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-size: large;
+    color: #ee7bba;
+  }
   
+  
+
   /* Create a container for the main content */
   .container {
     max-width: 1000px;
@@ -41,9 +63,10 @@
     padding: 10px 0;
     text-align: center;
     width: 100%;
+    font-size: 1.5rem;
   }
  
-  /* Media player styling */
+  /* Album cover styling */
 
   
    #album-image {
@@ -59,6 +82,15 @@
     gap: 1rem;
     margin-top: 10px;
     width: 100%;
+  }
+  
+  #play-pause-btn {
+    display: flex;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 40;
   }
   
   .custom-controls button {
