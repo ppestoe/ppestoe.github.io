@@ -8,12 +8,30 @@ const songList = [
   let loop = false;
 
   const songAudio = document.querySelector("#song-audio");
-  
+  const songName = document.querySelector("song-name");
 
-  function playSong(no) {
-    myVideo.pause();
-    myVideo.src = videoList[no].link;
-    videoName.textContent = videoList[no].name;
-    myVideo.load();
-    myVideo.play();
+
+//   button controls 
+// --play pause button--
+const playPauseBtn = document.querySelector("play-pause-btn");
+const playPauseImg = document.querySelector("play-pause-img");
+playPauseBtn.addEventListener("click", togglePlay);
+
+function playSong(no) {
+    songAudio.pause();
+    songAudio.src = videoList[no].link;
+    songName.textContent = songList[no].name;
+    songAudio.load();
+    songAudio.play();
+
+  }
+
+  function togglePlay() {
+    if(songAudio.paused|| songAudio.ended) {
+        playPauseImg.src = "https://img.icons8.com/ios-glyphs/70/07421F/play--v1.png";
+        songAudio.play()
+    } else {
+        playPauseImg.src = "https://img.icons8.com/ios-glyphs/70/07421F/pause--v1.png"
+        songAudio.pause();
+    }
   }
