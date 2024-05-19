@@ -14,8 +14,8 @@
   }
   
   body {
-    font-family: "Space Grotesk", sans-serif;
-    font-weight: 400px;
+    font-family: "Exo 2", sans-serif , bold;
+    font-weight: 400;
     background-color: var(--primary-bg-color);
     color: var(--text-color);
     line-height: 4;
@@ -23,7 +23,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
   }
 
   h1 {
@@ -36,7 +35,8 @@
     display: flex;
     margin: auto;
     justify-content: center;
-    font-size: large;
+    font-size: 2rem;
+    font-weight: 900;
   }
   
   h3 {
@@ -128,3 +128,16 @@
     padding: 10px 0;
     width: 100%;
   }
+/* fonts */
+  .patrick-hand-regular {
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.exo-2 {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+  
