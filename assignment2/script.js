@@ -11,7 +11,6 @@ const songList = [
   let loop = false;
 
   const songAudio = document.querySelector("#song-audio");
-
   const songName = document.querySelector("#song-name");
   const songCover = document.querySelector("#album-image")
 
@@ -25,6 +24,25 @@ playPauseBtn.addEventListener("click", togglePlay);
 // --volume buttons--
 const volUpButton = document.querySelector("#vol-up-btn");
 const volDownButton = document.querySelector("#vol-down-btn");
+const muteUnmuteImg = document.querySelector("#mute-unmute-img");
+const muteUnmuteButton = document.querySelector("#mute-unmute-btn");
+
+muteUnmuteButton.addEventListener("click", toggleMute);
+
+function toggleMute() {
+    if(songAudio.muted)
+        {         
+            songAudio.muted=false;
+            muteUnmuteImg.src = "https://img.icons8.com/ios-glyphs/40/07421F/mute--v1.png";
+   
+        }
+        else {
+            songAudio.muted=true;
+            muteUnmuteImg.src = "https://img.icons8.com/ios-glyphs/40/9A155D/mute--v1.png";
+
+        }
+}
+
 
 volUpButton.addEventListener("click", volumeUp);
 volDownButton.addEventListener("click", volDown);
@@ -94,6 +112,19 @@ function playSong(no) {
         songAudio.pause();
     }
   }
+// --Like button--
+const likeUnlikeImg = document.querySelector("#like-unlike-img");
+const likeUnlikeButton = document.querySelector("#like-unlike-btn");
+const likedSongs = document.querySelectorAll("#liked-songs");
+const li = document.createElement("li")
+
+likeUnlikeButton.addEventListener("click", toggleLike);
+
+function toggleLike() {
+
+   likedSongs.textContent = songList[no].name;
+
+}
 
 //   --Changing cover--
 const song1Btn = document.querySelector("#song1-btn");
