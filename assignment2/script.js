@@ -68,6 +68,8 @@ function playSongAtIndex(index) {
   songAudio.pause(); // Pause the video before changing source
   console.log(songList[index].link);
   songAudio.src = songList[index].link;
+  songName.textContent = songList[index].name;
+  songCover.src = songList[index].img;
   songAudio.load(); // Load the new source
   songAudio.play(); // Play the video
 }
