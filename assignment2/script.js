@@ -85,11 +85,11 @@ function playSong(no) {
 
   function togglePlay() {
     if(songAudio.paused|| songAudio.ended) {
-        playPauseImg.src = "https://img.icons8.com/ios-glyphs/70/07421F/play--v1.png";
+        playPauseImg.src = "https://img.icons8.com/ios-glyphs/70/07421F//pause--v1.png";
         playPauseBtn.style.backgroundColor = "#83b895";
         songAudio.play()
     } else {
-        playPauseImg.src = "https://img.icons8.com/ios-glyphs/70/9A155D/pause--v1.png"
+        playPauseImg.src = "https://img.icons8.com/ios-glyphs/70/9A155D/play--v1.png"
         playPauseBtn.style.backgroundColor = "pink";
         songAudio.pause();
     }
