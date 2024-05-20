@@ -179,6 +179,11 @@ function updateProgressBar() {
         songTime.textContent = songAudio.currentTime.toFixed(2);
 }
 
+progressBar.addEventListener('click', (e) =>{
+  const progressTime = (e.offsetX / progressBar.offsetWidth) * songAudio.duration
+  songAudio.currentTime = progressTime
+})
+
 //autoplay the next song
 songAudio.addEventListener("ended", nextTrack);
 
