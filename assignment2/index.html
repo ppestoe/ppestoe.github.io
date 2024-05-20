@@ -1,16 +1,21 @@
 <!-- All icons sourced from https://icons8.com-->
+<!-- For this assignment, I wanted to make an music album site, where users can listen to a selection of different songs of their choice-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment 2</title>
+    <title>WingChengA2</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   </head>
   <body>
     <!-- Header Section -->
@@ -22,8 +27,10 @@
   
     <!-- Song Title + audio -->
       <div class="song-title">
-      <h2>Now Playing: <span id="song-name">The Apolocheese Cat</span>
-
+      <h2>
+        <span class="fancy-symbols">✧</span>
+        Now Playing: <span id="song-name">The Apolocheese Cat</span>
+        <span class="fancy-symbols">✧</span>
       </h2>
 
       </div>
@@ -81,22 +88,18 @@
           </div>
                     
           <div class="progress-bar"> 
-
             <span id="progress-bar-fill"></span>
-            
+            <span id="song-time">0.00</span>
         </div>
-         
+<!-- other control buttons -->
         <div class="control-2">
+
+
 
           <button id="mute-unmute-btn">
             <img  
             src="https://img.icons8.com/ios-glyphs/40/07421F/mute--v1.png" 
             alt="mute--v1" id="mute-unmute-img"/>
-          </button>
-          <button id="like-unlike-btn">
-            <img  
-            src="https://img.icons8.com/ios-glyphs/40/07421F/like--v1.png" 
-            alt="like--v1" id="like-unlike-img"/>
           </button>
   
         </div>
@@ -121,15 +124,6 @@
               <img src="cover4.jpg" alt="cover-image">
             </button>
         </div>
-      </section>
-
-      <section>
-        <h2>Liked Songs</h2>
-        <span>
-          <ul>
-            <li  id="liked-songs">liked songs here!</li>
-          </ul>
-        </span>
       </section>
     </main>
 

@@ -12,7 +12,21 @@ const songList = [
 
   const songAudio = document.querySelector("#song-audio");
   const songName = document.querySelector("#song-name");
-  const songCover = document.querySelector("#album-image")
+  const songCover = document.querySelector("#album-image");
+
+//---text changing colors---,
+//  I wanted to make my website more interesting,
+  // so I researched on how to make my text change colours and found the code on this website:
+  // https://www.geeksforgeeks.org/how-to-create-text-animation-effect-using-javascript/
+  let colorIndex = 0;
+ 
+  function changeColor() {
+      const colors = ['pink', '#ee7bba'];
+      songName.style.color = colors[colorIndex];
+      colorIndex = (colorIndex + 1) % colors.length;
+  }
+  // Change text color every 1000 milliseconds (1 second)
+  setInterval(changeColor, 1000);
 
 
 //   button controls 
@@ -84,7 +98,6 @@ function nextTrack() {
 // Function to play video at a specific index
 function playSongAtIndex(index) {
   songAudio.pause(); // Pause the video before changing source
-  console.log(songList[index].link);
   songAudio.src = songList[index].link;
   songName.textContent = songList[index].name;
   songCover.src = songList[index].img;
@@ -112,19 +125,7 @@ function playSong(no) {
         songAudio.pause();
     }
   }
-// --Like button--
-const likeUnlikeImg = document.querySelector("#like-unlike-img");
-const likeUnlikeButton = document.querySelector("#like-unlike-btn");
-const likedSongs = document.querySelectorAll("#liked-songs");
-const li = document.createElement("li")
 
-likeUnlikeButton.addEventListener("click", toggleLike);
-
-function toggleLike() {
-
-   likedSongs.textContent = songList[no].name;
-
-}
 
 //   --Changing cover--
 const song1Btn = document.querySelector("#song1-btn");
@@ -163,12 +164,17 @@ function playSong(no) {
   }
   
 
-//   --progress bar--
-
+//   --progress bar and duration--
+const songTime = document.querySelector("#song-time");
 const progressBar = document.querySelector("#progress-bar-fill");
 songAudio.addEventListener("timeupdate", updateProgressBar);
 
 function updateProgressBar() {
     const progress = (songAudio.currentTime / songAudio.duration) * 100;
         progressBar.style.width = progress + "%";
+        songTime.textContent = songAudio.currentTime.toFixed(2);
 }
+
+//autoplay the next song
+songAudio.addEventListener("ended", nextTrack);
+
