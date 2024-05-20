@@ -165,10 +165,10 @@ img{
     margin-left: auto;
     margin-right: auto;
     border: 3px double #f089c294;
-    overflow: hidden;
+
   }
   
-  .progress-bar span {
+  #progress-bar-fill {
     display: block;
     height: 100%;
     background-color: #f089c294;
@@ -196,28 +196,21 @@ img{
   font-style: normal;
 }
   
-ul {
-  display:flexbox;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  align-items: center;
-  padding-left: 100px;
-  font-size: 1.1rem;
-  color: #ee7bba;
-  font-weight: 600;
-list-style: none;
+select {
+  display: none;
 }
 
-.likedSongs {
-  display:flexbox;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  align-items: center;
-  padding-left: 100px;
-  font-size: 1.1rem;
-  color: #ee7bba;
+#song-time{
+  display: flex;
+  justify-content:end;
+  padding: 1px;
+  color: #28a859;
   font-weight: 600;
-  list-style-image: url(https://img.icons8.com/ios-glyphs/20/ee7bba/like--v1.png) ;
+  margin: auto;
+  z-index: 1;
+}
+
+.fancy-symbols{
+  color: rgb(241, 187, 71);
+  z-index: 1;
 }
