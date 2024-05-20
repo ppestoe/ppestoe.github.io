@@ -1,5 +1,5 @@
 // To make a music album playlist, I need to make a list of the album covers
-// as well as a list of song titles.
+// as well as a list of song titles, and then an interactive progress bar.
 //I've linked all my title/audio/covers to this list to make the coding process easier
 const songList = [
     { name: "The Apolocheese Cat", link: "audio/the apolocheese (1).mp3" , img: "cover1.png" },
