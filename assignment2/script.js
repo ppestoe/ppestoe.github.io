@@ -170,19 +170,30 @@ function playSong(no) {
 
 //   --progress bar and duration--
 const songTime = document.querySelector("#song-time");
-const progressBar = document.querySelector("#progress-bar-fill");
+const progressBar = document.querySelector(".progress-bar");
+const progressBarFill = document.querySelector("#progress-bar-fill");
 songAudio.addEventListener("timeupdate", updateProgressBar);
 
 function updateProgressBar() {
     const progress = (songAudio.currentTime / songAudio.duration) * 100;
-        progressBar.style.width = progress + "%";
-        songTime.textContent = songAudio.currentTime.toFixed(2);
+        progressBarFill.style.width = progress + "%";
+        songTime.textContent = songAudio.currentTime.toFixed(2); //time duration displayed to 2 decimal pts
 }
+// allows the progress to be changed upon clicking the progress bar
+// I found the tutorial at https://img.ly/blog/how-to-build-video-player-in-javascript/
+//this function defines the progress bar moving when its clicked
+function progressClicked(e) {
+  const position = (e.offsetX / progressBar.offsetWidth) * songAudio.duration; //defines a 'position' based off of where the mouse lands
+  songAudio.currentTime = position; //this syncs the audio with the position
+}
+//this is making the function happen whenever the progress bar is clicked
+progressBar.addEventListener("click", progressClicked);
+let mousedown = false;
+//these allows the user to slide through the progress bar. 
+progressBar.addEventListener("mousedown", () => (mousedown = true));
+progressBar.addEventListener("mousemove", (e) => mousedown && progressClicked(e));
+progressBar.addEventListener("mouseup", () => (mousedown = false));
 
-progressBar.addEventListener('click', (e) =>{
-  const progressTime = (e.offsetX / progressBar.offsetWidth) * songAudio.duration
-  songAudio.currentTime = progressTime
-})
 
 //autoplay the next song
 songAudio.addEventListener("ended", nextTrack);
