@@ -136,7 +136,7 @@ const song1Btn = document.querySelector("#song1-btn");
 const song2Btn = document.querySelector("#song2-btn");
 const song3Btn = document.querySelector("#song3-btn");
 const song4Btn = document.querySelector("#song4-btn");
-
+//when a song cover is clicked, it plays a song accordingly
 song1Btn.addEventListener("click", function playIt() {
     songAudio.pause();
     playSong(0);
