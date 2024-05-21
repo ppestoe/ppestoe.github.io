@@ -1,0 +1,80 @@
+body {
+    background-color: #1a120b;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    max-width: 1000px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #e5e5cb;
+    /* color: #3c2a21; */
+    font-size: 1.1rem;
+    gap: 1.5rem;
+  }
+  
+  .outer {
+    border: 20px double #e5e5cb7a;
+    border-radius: 25%;
+    width: 400px;
+    min-height: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    opacity: 1;
+    /* background-color: cornsilk; */
+  }
+
+
+  button {
+    padding: 20px;
+    font-size: 2rem;
+    background-color: rgb(127, 255, 133);
+    color: darkgreen;
+    border: none;
+    transition: background-color 0.3s ease scale 0.4s ease rotate 0.4 ease;
+    border-radius: 7%;
+    
+  }
+
+  button:hover {
+    background-color: rgb(48, 151, 48);
+    color:beige;
+    scale: 1.1;
+    rotate: 64deg;
+  }
+
+  input{
+    padding: 10px ;
+    border: 4px inset lime;
+    border-radius: 5%;
+  }
+
+  input:hover{
+    border-color: aquamarine;
+  }
+
+  .fill-icon {
+    transition: fill 0.44s ease ;
+  }
+
+  .fill-icon:hover {
+    fill:rgb(104, 221, 229);
+
+  }
+
+  .icon-duck {
+    transition: translate 0.4s ease ;
+  }
+
+  .icon-duck:hover{
+    scale:1.2; 
+    translate: -180px -20px ;
+  }
+  
