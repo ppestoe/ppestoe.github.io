@@ -183,7 +183,7 @@ function updateProgressBar() {
 // I found the tutorial at https://img.ly/blog/how-to-build-video-player-in-javascript/
 //this function defines the progress bar moving when its clicked
 function progressClicked(e) {
-  const position = (e.offsetX / progressBar.offsetWidth) * songAudio.duration; //defines a 'position' based off of where the mouse lands
+  const position = (e.offsetX / progressBar.offsetWidth) * songAudio.duration; //defines a 'position' based off of where the mouse lands, e being an event
   songAudio.currentTime = position; //this syncs the audio with the position
 }
 //this is making the function happen whenever the progress bar is clicked
