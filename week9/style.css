@@ -1,0 +1,217 @@
+body {
+    background-color: #1a120b;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    max-width: 1000px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #e5e5cb;
+    /* color: #3c2a21; */
+    font-size: 1.1rem;
+    gap: 1.5rem;
+  }
+  
+  .outer {
+    border: 20px double #e5e5cb7a;
+    border-radius: 25%;
+    width: 400px;
+    min-height: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    opacity: 1;
+    animation-name: border-switch;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+    /* background-color: cornsilk; */
+  }
+
+
+  button {
+    padding: 20px;
+    font-size: 2rem;
+    background-color: rgb(127, 255, 133);
+    color: darkgreen;
+    border: none;
+    transition: background-color 0.3s ease scale 0.4s ease rotate 0.4 ease;
+    border-radius: 7%;
+    
+  }
+
+  button:hover {
+    background-color: rgb(48, 151, 48);
+    color:beige;
+    scale: 1.1;
+    rotate: 64deg;
+  }
+
+  input{
+    padding: 10px ;
+    border: 4px inset lime;
+    border-radius: 5%;
+  }
+
+  input:hover{
+    border-color: aquamarine;
+  }
+
+  .fill-icon {
+    transition: fill 0.44s ease ;
+  }
+
+  .fill-icon:hover {
+    fill:rgb(104, 221, 229);
+
+  }
+
+  .icon-duck {
+    transition: translate 0.4s ease ;
+    animation-name: duck;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+  }
+
+  .icon-duck:hover{
+    scale:1.2; 
+    translate: -180px -20px ;
+  }
+  
+  #box {
+    background-color: rgb(255, 165, 232);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #101a73;
+    animation-name: color-switch;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+
+
+
+.spinner{
+    width: 120px;
+    height: 120px;
+    border: 10px dashed rgb(255, 255, 255);
+    border-top: 10px inset #0004ff;
+    border-bottom:10px double red;
+    border-radius: 50%;
+    animation-name: loading;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#heart{
+    width: 200px;
+    height: 200px;
+    animation-name: heartbeat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+#side-drawer{  
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0 ;
+    left: -200px;
+    background-color: beige;
+    transition: translate 0.4s linear;
+    z-index: 1; animation-name: color-switch;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+
+ul{
+    color: #101a73;
+    margin: auto;
+}
+
+  @keyframes color-switch {
+    0% {
+        background-color: rgb(0, 166, 255);
+    }
+    20% {
+        background-color: rgb(0, 89, 255);
+    }
+    40% {
+        background-color: rgb(89, 0, 255);
+    }
+    60% {
+        background-color: rgb(255, 0, 183);
+    }
+    80% {
+        background-color: rgb(89, 0, 255);
+    }
+    100% {
+        background-color: rgb(0, 89, 255);
+    }
+    
+  }
+
+  @keyframes border-switch {
+    0% {
+        border-color: rgb(0, 166, 255);
+    }
+    20% {
+        border-color: rgb(0, 89, 255);
+    }
+    40% {
+        border-color: rgb(89, 0, 255);
+    }
+    60% {
+        border-color: rgb(255, 0, 183);
+    }
+    80% {
+        border-color: rgb(89, 0, 255);
+    }
+    100% {
+        border-color: rgb(0, 89, 255);
+    }
+    
+  }
+
+  @keyframes duck {
+    0%{
+        translate: 0px 0px;
+    }
+    50%{
+        translate: 0px -160px;
+        rotate: 36deg;
+    }
+    100%{
+        translate: 0px 0px;
+    }
+  }
+
+  @keyframes loading {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+    
+  }
+
+  @keyframes heartbeat {
+    0%{
+        scale: 0.9;
+    }
+    50%{
+        scale: 0.8;
+    }
+    100%{
+        scale: 0.9;
+    }
+  }
