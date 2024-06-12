@@ -23,7 +23,7 @@ const songList = [
   let colorIndex = 0;
  
   function changeColor() {
-      const colors = ['pink', '#ee7bba'];
+      const colors = ['pink', '#ee7bba'];//colors used in the cycle
       songName.style.color = colors[colorIndex];
       colorIndex = (colorIndex + 1) % colors.length;
   }
@@ -44,6 +44,7 @@ const muteUnmuteImg = document.querySelector("#mute-unmute-img");
 const muteUnmuteButton = document.querySelector("#mute-unmute-btn");
 
 muteUnmuteButton.addEventListener("click", toggleMute);
+
 
 function toggleMute() {
     if(songAudio.muted)
