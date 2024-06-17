@@ -26,9 +26,5 @@ function handleDrop() {
       resultBlob.classList.toggle("show");
     resultBlob.style.backgroundColor = color;
     draggedElement = null;
-    blobImg.src = "https://img.icons8.com/ios-filled/BC7C68/500/splash.png";
-  }
-  else {
-    blobImg.src = "https://img.icons8.com/ios/BC7C68/500/splash.png";
   }
 }
