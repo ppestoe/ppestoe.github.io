@@ -43,7 +43,7 @@ body {
 
   .paint-palette {
     width: 900px;
-    position: relative;
+    position: absolute;
     margin: auto;
     z-index: 0;
 
@@ -52,30 +52,69 @@ body {
 .blob{
     cursor: pointer;
     z-index: 1;
-    margin: auto;
+    margin-left: -500px;
     display: flex;
     position: absolute;
     flex-direction: row;
     width: 70vh;
-    height: 70vh;
+    height: 80vh;
+    filter: drop-shadow(2px 2px 2px #ca7f7f);
+
+}
+/* Styling of each color */
+#black {
+align-self: flex-end;
+margin-inline-start: 20px;
 }
 
-#red {
-    align-self: flex-end;
+#white{
+align-self: flex-end;
+margin-inline-start: 60px;
+margin-block-start: 400px;
 }
+
+#red{
+    align-self: flex-end;
+    margin-inline-start: -160px;
+    margin-inline-end: -80px;
+    margin-block-end: 110px;
+}
+
 #orange{
-    align-self: center;
-    margin: -300px;
+    align-self: flex-start;
+    margin-block-start: 130px;
+    margin-inline-start: 140px;
+}
+
+#yellow{
+    align-self: flex-start;
+    margin-inline-start: -400px;
+}
+
+#green{
+    align-self: flex-start;
+    margin-block-start: -50px;
+}
+#blue{
+    align-self: flex-start;
+}
+#purple{
+    align-self: flex-start;
+    margin-inline-start: -30px;
+    margin-block-start: 150px;
 }
 
 .result{
     cursor: pointer;
     z-index: 1;
     margin: auto;
+    margin-left: -50px;
+    margin-block-start: -50px;
     display: flex;
     position: absolute;
     align-items: center;
     justify-content: center;
+    filter: drop-shadow(2px 2px 2px #ca7f7f);
 
 }
 
