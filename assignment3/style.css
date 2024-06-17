@@ -34,8 +34,9 @@ body {
   /* hex and rgb code display, set to none on default*/
 .code{
     display: flex;
-    padding: 0 200px;
-    display: none;
+    padding: 0 400px;
+    width: 70vw;
+    /* display: none; */
 }
 .code.show{
     display: show;
@@ -71,6 +72,7 @@ margin-inline-start: 20px;
 }
 
 #white{
+
 align-self: flex-end;
 margin-inline-start: 60px;
 margin-block-start: 400px;
@@ -118,9 +120,21 @@ margin-block-start: 400px;
     align-items: center;
     justify-content: center;
     filter: drop-shadow(2px 2px 2px #ca7f7f);
-
 }
 
+.result.show{
+    cursor: pointer;
+    z-index: 1;
+    margin: auto;
+    margin-left: -50px;
+    margin-block-start: -50px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(2px 2px 2px #ca7f7f);
+    background-image: url("https://img.icons8.com/ios-filled/2266EE/200/splash.png");
+}
  /* paint */
  .paint-rest{
     fill: none;
