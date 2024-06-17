@@ -1,0 +1,90 @@
+:root {
+    --main-text-color: #fff;
+    
+  }
+
+body {
+    background-color: #241826;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    max-width: 1000px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #e5e5cb;
+    /* color: #3c2a21; */
+    font-size: 1.1rem;
+    gap: 1.5rem;
+  }
+/* footer styling */
+  footer {
+    color: var(--main-text-color);
+    font-size: 50px;
+    justify-content: space-around;
+    display: flex;
+    padding: 10px;
+    bottom: 0;
+    position: fixed;
+  }
+  
+  /* hex and rgb code display, set to none on default*/
+.code{
+    display: flex;
+    padding: 0 200px;
+    display: none;
+}
+.code.show{
+    display: show;
+}
+
+  .paint-palette {
+    width: 900px;
+    position: relative;
+    margin: auto;
+    z-index: 0;
+
+  }
+
+.blob{
+    cursor: pointer;
+    z-index: 1;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    width: 70vh;
+    height: 70vh;
+}
+
+#red {
+    align-self: flex-end;
+}
+#orange{
+    align-self: center;
+    margin: -300px;
+}
+
+.result{
+    cursor: pointer;
+    z-index: 1;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+
+}
+
+ /* paint */
+ .paint-rest{
+    fill: none;
+ }
+/* hex code on paint */
+ .hex{
+    font-size: 50px;
+    fill: #000000;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 499.05 410.88">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cfcfce;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #8a6929;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        fill: #231f20;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-2" points="12.06 181.86 12.06 189.2 55.54 189.2 55.54 198.1 12.06 198.1 12.06 205.44 55.54 205.44 55.54 214.34 12.06 214.34 12.06 221.68 55.54 221.68 55.54 230.58 12.06 230.58 12.06 237.93 55.54 237.93 55.54 246.83 12.06 246.83 12.06 254.17 55.54 254.17 55.54 266.85 .5 266.85 .5 171.98 55.54 171.98 55.54 181.86 12.06 181.86"/>
+  <rect class="cls-2" x="12.06" y="181.86" width="43.48" height="7.34"/>
+  <rect class="cls-2" x="12.06" y="198.1" width="43.48" height="7.34"/>
+  <rect class="cls-2" x="12.06" y="214.34" width="43.48" height="7.34"/>
+  <rect class="cls-2" x="12.06" y="230.58" width="43.48" height="7.35"/>
+  <rect class="cls-2" x="12.06" y="246.83" width="43.48" height="7.34"/>
+  <rect class="cls-1" x="12.06" y="181.86" width="43.48" height="7.34"/>
+  <rect class="cls-1" x="12.06" y="198.1" width="43.48" height="7.34"/>
+  <rect class="cls-1" x="12.06" y="214.34" width="43.48" height="7.34"/>
+  <rect class="cls-1" x="12.06" y="230.58" width="43.48" height="7.35"/>
+  <rect class="cls-1" x="12.06" y="246.83" width="43.48" height="7.34"/>
+  <polygon class="cls-3" points="128.33 138.15 125.04 298.29 106.36 296.6 111.4 139.51 128.33 138.15"/>
+  <polygon class="cls-2" points="111.4 139.51 106.36 296.6 55.54 292 55.54 143.99 111.4 139.51"/>
+  <polygon class="cls-2" points="374.54 118.4 374.54 320.85 125.04 298.29 128.33 138.15 374.54 118.4"/>
+  <polygon class="cls-3" points="436.19 113.45 434.06 326.24 374.54 320.85 374.54 118.4 436.19 113.45"/>
+  <polygon class="cls-2" points="498.55 108.45 498.55 332.07 434.06 326.24 436.19 113.45 498.55 108.45"/>
+</svg>
