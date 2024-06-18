@@ -166,7 +166,7 @@ fill: #FFFFFF;
   z-index: 100;
 }
 
-.pop {
+#pop {
   background: #1a0a32c4;
   height: 100vh;
   width:100%;
@@ -177,7 +177,25 @@ fill: #FFFFFF;
   margin: auto;
 }
 
+#pop-text {
+  position: relative;
+  margin-top: 15%;
+  filter: drop-shadow(4px 4px 4px  #18051c);
 
+}
+
+#close-pop {
+  cursor: pointer;
+  background: rgba(142, 103, 172, 0.267);
+  border-style: none;
+  border: 10px double ;
+  border-radius: 40px;
+  filter: drop-shadow(4px 4px 4px  #18051c);
+}
+#close-pop:hover {
+width: 280px;
+height: 160px;
+}
 
 .roboto-slab {
   font-family: "Roboto Slab", serif;
