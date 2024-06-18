@@ -38,12 +38,8 @@ body {
     display: flex;
     padding: 0 400px;
     width: 70vw;
-    /* display: none; */
-}
-.rgbcode{
-    display: flex;
-    padding: 0 400px;
-    width: 70vw;
+    filter: drop-shadow(3px 5px 2px #53489d);
+
     /* display: none; */
 }
 
@@ -55,7 +51,7 @@ body {
 
   }
 /* styling of the flexbox */
-.blob{
+.blob {
     cursor: pointer;
     z-index: 3;
     margin: auto;
@@ -65,7 +61,7 @@ body {
     flex-direction: row;
     width: 70vh;
     height: 80vh;
-    filter: drop-shadow(2px 2px 2px #ca7f7f);
+    filter: drop-shadow(3px 5px 2px #ca7f7f);
     
 }
 
@@ -74,7 +70,7 @@ body {
 #black {
 align-self: flex-end;
 margin-inline-start: 20px;
-fill: black;
+fill: rgb(0,0,0) ;
 }
 
 #white{
@@ -82,7 +78,7 @@ fill: black;
 align-self: flex-end;
 margin-inline-start: 60px;
 margin-block-start: 400px;
-fill: white;
+fill: rgb(255,255,255);
 }
 
 #red{
@@ -90,20 +86,20 @@ fill: white;
     margin-inline-start: -160px;
     margin-inline-end: -80px;
     margin-block-end: 110px;
-    fill: red;
+    fill: rgb(225,0,0);
 }
 
 #orange{
     align-self: flex-start;
     margin-block-start: 130px;
     margin-inline-start: 140px;
-    fill: #ff6400;
+    fill: rgb(255, 127, 0);
 }
 
 #yellow{
     align-self: flex-start;
     margin-inline-start: -400px;
-    fill: #FFFF00;
+    fill: rgb(rgb(255, 255, 0));
 }
 
 #green{
@@ -139,4 +135,8 @@ fill: white;
 
 #paint{
     fill: #BC7C68;
-}
+  }
+
+  #paint.redmix {
+    fill: color-mix(in lab, currentColor 50%, red 50%);
+  }
