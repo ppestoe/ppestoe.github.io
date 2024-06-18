@@ -13,6 +13,7 @@ const whiteBlob = document.querySelector("#white");
 const blackBlob = document.querySelector("#black");
 const resultBlob = document.querySelector("#resultblob");
 const paint = document.querySelector("#paint");
+const code = document.querySelector(".hexcode");
 
 redBlob.addEventListener("dragstart", redStartDrag);  
 orangeBlob.addEventListener("dragstart", orangeStartDrag); 
@@ -64,7 +65,6 @@ function handleDrop() {
       .getComputedStyle(draggedElement)
       .getPropertyValue("fill");
       paint.style.fill = color ;
-
     draggedElement = null;
   }
 }
