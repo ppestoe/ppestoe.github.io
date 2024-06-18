@@ -25,19 +25,33 @@ body {
   footer {
     color: var(--main-text-color);
     font-size: 50px;
-    justify-content: space-around;
-    display: flex;
+    font-family: "Roboto Slab", serif;
+    margin-left: 1000px;
+    display: block;
+
     padding: 10px;
     bottom: 0;
-    position: fixed;
+    position: absolute;
     
   }
+
+  #reset {
+    background-color: #241826;
+    border-radius: 15%;
+    padding: 10px;
+    filter: drop-shadow(3px 5px 2px #07041b);
+    border: 10px double rgb(239, 237, 205);
+  }
+
+  #reset:hover {
+   width: 200px ;
+   height: 100px;
+  }
+
   
-  /* hex and rgb code display, set to none on default*/
+  /* hex display, set to none on default*/
 .hexcode{
-    display: flex;
-    padding: 0 400px;
-    width: 70vw;
+    font-size: 30px;
     filter: drop-shadow(3px 5px 2px #53489d);
 
     /* display: none; */
@@ -86,7 +100,7 @@ fill: rgb(255,255,255);
     margin-inline-start: -160px;
     margin-inline-end: -80px;
     margin-block-end: 110px;
-    fill: rgb(225,0,0);
+    fill: rgb(255, 0, 0);
 }
 
 #orange{
@@ -99,7 +113,7 @@ fill: rgb(255,255,255);
 #yellow{
     align-self: flex-start;
     margin-inline-start: -400px;
-    fill: rgb(rgb(255, 255, 0));
+    fill: yellow;
 }
 
 #green{
@@ -134,9 +148,14 @@ fill: rgb(255,255,255);
 }
 
 #paint{
-    fill: #BC7C68;
+    color: #ffffff00;
   }
 
-  #paint.redmix {
-    fill: color-mix(in lab, currentColor 50%, red 50%);
-  }
+
+
+.roboto-slab {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
