@@ -59,8 +59,11 @@ function endDrag(event) {
 
 paint.addEventListener("drop", handleDrop);
 
+
+
+
 function handleDrop() {
-  if (draggedElement) {
+  if {
     const color = window
       .getComputedStyle(draggedElement)
       .getPropertyValue("fill");
