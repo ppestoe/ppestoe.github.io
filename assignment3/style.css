@@ -56,6 +56,12 @@ body {
 
     /* display: none; */
 }
+.rgbcode{
+  font-size: 25px;
+  filter: drop-shadow(3px 5px 2px #53489d);
+
+  /* display: none; */
+}
 
   .paint-palette {
     width: 900px;
@@ -84,7 +90,7 @@ body {
 #black {
 align-self: flex-end;
 margin-inline-start: 20px;
-fill: rgb(0,0,0) ;
+fill: #000000 ;
 }
 
 #white{
@@ -92,7 +98,7 @@ fill: rgb(0,0,0) ;
 align-self: flex-end;
 margin-inline-start: 60px;
 margin-block-start: 400px;
-fill: rgb(255,255,255);
+fill: #FFFFFF;
 }
 
 #red{
@@ -100,14 +106,14 @@ fill: rgb(255,255,255);
     margin-inline-start: -160px;
     margin-inline-end: -80px;
     margin-block-end: 110px;
-    fill: rgb(255, 0, 0);
+    fill: #ff0000;
 }
 
 #orange{
     align-self: flex-start;
     margin-block-start: 130px;
     margin-inline-start: 140px;
-    fill: rgb(255, 127, 0);
+    fill: #ff6400;
 }
 
 #yellow{

@@ -1,5 +1,6 @@
 // this is so that the other functions can refer to the dragged element
 let draggedElement = null;
+let paintHex = null; 
 // defining the main variables that I'll be working with
 const colorBlob = document.querySelector(".blob");
 // individually doing the variables for the colors
@@ -13,7 +14,8 @@ const whiteBlob = document.querySelector("#white");
 const blackBlob = document.querySelector("#black");
 const resultBlob = document.querySelector("#resultblob");
 const paint = document.querySelector("#paint");
-const code = document.querySelector(".hexcode");
+const code = document.querySelector(".rgbcode");
+const hCode = document.querySelector(".hexcode");
 const resetBtn = document.querySelector("#reset");
 
 redBlob.addEventListener("dragstart", redStartDrag);  
@@ -29,11 +31,11 @@ resetBtn.addEventListener("click", resetColor);
 function resetColor(){
   paint.style.fill = "#BC7C68";
   code.textContent = " ";
+  hCode.textContent = " ";
 }
 
 function redStartDrag() {
   draggedElement = redBlob;
-  hex2dec("#ff0000");
 
 }
 
@@ -68,36 +70,136 @@ function orangeStartDrag() {
 paint.addEventListener("dragover", endDrag);
 
 function endDrag(event) {
-  event.preventDefault();
+  let rgb2 = window
+  .getComputedStyle(draggedElement)
+  .getPropertyValue("fill");
+
+
+let colors = ["red", "green", "blue"] 
+
+// Getting the index of "(" and ")"  
+// by using the indexOf() method 
+
+
+let colorArr2 = rgb2.slice( 
+rgb2.indexOf("(") + 1,  
+rgb2.indexOf(")") 
+).split(", "); 
+
+
+let obj2 = new Object(); 
+
+// Insert the values into obj 
+
+
+colorArr2.forEach((k, i) => { 
+obj2[colors[i]] = k 
+}) 
+
+let r2 = obj2['red'];
+let g2 = obj2['green'];
+let b2 = obj2['blue']; 
+rgb2hex(r2,g2,b2);
+const result = rgb2hex(r2,g2,b2)
+console.log(rgb2hex(r2,g2,b2));
+event.preventDefault();
+
+return result
+
 }
 
 paint.addEventListener("drop", handleDrop);
 
-
-
+const result = endDrag(event);
 
 function handleDrop() {
   if (draggedElement) {
-    const color1 = window
+    let rgb2 = window
     .getComputedStyle(draggedElement)
     .getPropertyValue("fill");
-  const color2 = window
-  .getComputedStyle(paint)
-  .getPropertyValue("fill");
-    const mixedCol = mix_hexes(color1,color2);
-      paint.style.fill = color1;
+  
+  
+  let colors = ["red", "green", "blue"] 
+  
+  // Getting the index of "(" and ")"  
+  // by using the indexOf() method 
+  
+  
+  let colorArr2 = rgb2.slice( 
+  rgb2.indexOf("(") + 1,  
+  rgb2.indexOf(")") 
+  ).split(", "); 
+  
+  
+  let obj2 = new Object(); 
+  
+  // Insert the values into obj 
+  
+  
+  colorArr2.forEach((k, i) => { 
+  obj2[colors[i]] = k 
+  }) 
+  
+  let r2 = obj2['red'];
+  let g2 = obj2['green'];
+  let b2 = obj2['blue']; 
+  rgb2hex(r2,g2,b2);
+  const result = rgb2hex(r2,g2,b2)
+  console.log(rgb2hex(r2,g2,b2));
+  
+
+    let color = window
+    .getComputedStyle(draggedElement)
+    .getPropertyValue("fill");
+      paint.style.fill = color;
       console.log(paint.style.fill);
+  // got code from https://www.geeksforgeeks.org/how-to-convert-rgb-color-string-into-an-object-in-javascript/
+      let rgb = paint.style.fill;
+
+      
+      let colorArr = rgb.slice( 
+        rgb.indexOf("(") + 1,  
+        rgb.indexOf(")") 
+    ).split(", "); 
+
+    let obj = new Object(); 
+
+    colorArr.forEach((k, i) => { 
+      obj[colors[i]] = k 
+  }) 
+  console.log(obj);
+
+  let r = obj['red'];
+  let g = obj['green'];
+  let b = obj['blue']; 
+
+  rgb2hex(r,g,b)
+  console.log(rgb2hex(r,g,b));
+
       code.textContent = paint.style.fill;
-    draggedElement = null;
+      hCode.textContent= rgb2hex(r,g,b);
+      paintHex=rgb2hex(r,g,b);
+      draggedElement = null;
+
+      let c1 = rgb2hex(r,g,b);
+      let c2 = result;
+      console.log(c1);
+      console.log(c2);
+mix_hexes(c1,c2);
+color = mix_hexes(c1,c2);
+paint.style.fill = color;
+
+hCode.textContent = rgb2hex(r2,g2,b2);
+  draggedElement = null;
+
+
+
   }
-
 }
 
-// console.log(mix_hexes('#', '#f6ff00'));
 
-function hex2dec(hex) {
-  return hex.replace('#', '').match(/.{2}/g).map(n => parseInt(n, 16));
-}
+
+
 
 function rgb2hex(r, g, b) {
   r = Math.round(r);
@@ -108,6 +210,22 @@ function rgb2hex(r, g, b) {
   b = Math.min(b, 255);
   return '#' + [r, g, b].map(c => c.toString(16).padStart(2, '0')).join('');
 }
+
+// color mixing code from GirkovArpa on Stackflow.com
+
+function hex2dec(hex) {
+  return hex.replace('#', '').match(/.{2}/g).map(n => parseInt(n, 16));
+}
+
+// function rgb2hex(r, g, b) {
+//   r = Math.round(r);
+//   g = Math.round(g);
+//   b = Math.round(b);
+//   r = Math.min(r, 255);
+//   g = Math.min(g, 255);
+//   b = Math.min(b, 255);
+//   return '#' + [r, g, b].map(c => c.toString(16).padStart(2, '0')).join('');
+// }
 
 function rgb2cmyk(r, g, b) {
   let c = 1 - (r / 255);
@@ -147,3 +265,7 @@ function mix_hexes(...hexes) {
   let mixture_hex = rgb2hex(...mixture_rgb);
   return mixture_hex;
 }
+
+
+
+
