@@ -273,4 +273,13 @@ function hide() {
 }
 
 
+const pop = document.getElementById("pop");
+const popBtn = document.querySelector("#close-pop");
+
+popBtn.addEventListener("click", hidePop);
+
+function hidePop(){
+  pop.style.display = "none"
+
+}
 
