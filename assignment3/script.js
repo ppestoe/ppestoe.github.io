@@ -264,6 +264,13 @@ function mix_hexes(...hexes) {
   return mixture_hex;
 }
 
+const loader = document.getElementById("preloader");
+
+window.addEventListener("load", hide)
+
+function hide() {
+  loader.style.display = "none"
+}
 
 
 

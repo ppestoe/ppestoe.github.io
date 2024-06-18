@@ -157,7 +157,13 @@ fill: #FFFFFF;
     color: #ffffff00;
   }
 
-
+#preloader {
+  background: #000 url(img/load.gif) no-repeat center center;
+  height: 100vh;
+  width:100%;
+  position: fixed;
+  z-index: 100;
+}
 
 .roboto-slab {
   font-family: "Roboto Slab", serif;
@@ -165,3 +171,4 @@ fill: #FFFFFF;
   font-weight: 500;
   font-style: normal;
 }
+
