@@ -59,15 +59,25 @@ function endDrag(event) {
 
 paint.addEventListener("drop", handleDrop);
 
-
+const mixColor = window
+.getComputedStyle(paint);
+.getPropertyValue("fill");
 
 
 function handleDrop() {
-  if {
+  if (draggedElement) {
     const color = window
       .getComputedStyle(draggedElement)
       .getPropertyValue("fill");
+
+
+
       paint.style.fill = color ;
     draggedElement = null;
+  }
+
+  else{
+
+    paint.style.fill = mixColor ;
   }
 }
