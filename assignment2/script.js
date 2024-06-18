@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 // To make a music album playlist, I need to make a list of the album covers
 // as well as a list of song titles, and then an interactive progress bar.
 //I've linked all my title/audio/covers to this list to make the coding process easier
@@ -198,4 +199,9 @@ progressBar.addEventListener("mouseup", () => (mousedown = false));
 
 //autoplay the next song
 songAudio.addEventListener("ended", nextTrack);
+=======
+// song title change
+const songTitle = document.querySelector(".songTitle");
+console.log(songTitle);
+>>>>>>> Stashed changes
 
