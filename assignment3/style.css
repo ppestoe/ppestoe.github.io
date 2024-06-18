@@ -19,6 +19,7 @@ body {
     /* color: #3c2a21; */
     font-size: 1.1rem;
     gap: 1.5rem;
+    
   }
 /* footer styling */
   footer {
@@ -29,17 +30,21 @@ body {
     padding: 10px;
     bottom: 0;
     position: fixed;
+    
   }
   
   /* hex and rgb code display, set to none on default*/
-.code{
+.hexcode{
     display: flex;
     padding: 0 400px;
     width: 70vw;
     /* display: none; */
 }
-.code.show{
-    display: show;
+.rgbcode{
+    display: flex;
+    padding: 0 400px;
+    width: 70vw;
+    /* display: none; */
 }
 
   .paint-palette {
@@ -49,26 +54,27 @@ body {
     z-index: 0;
 
   }
-
+/* styling of the flexbox */
 .blob{
     cursor: pointer;
-    z-index: 1;
-    margin-left: -500px;
-    margin-top: auto;
-    margin-right: auto;
-    margin-bottom: auto;
+    z-index: 3;
+    margin: auto;
+    margin-inline-start: -500px;
     display: flex;
     position: absolute;
     flex-direction: row;
     width: 70vh;
     height: 80vh;
     filter: drop-shadow(2px 2px 2px #ca7f7f);
-
+    
 }
+
+
 /* Styling of each color */
 #black {
 align-self: flex-end;
 margin-inline-start: 20px;
+fill: black;
 }
 
 #white{
@@ -76,6 +82,7 @@ margin-inline-start: 20px;
 align-self: flex-end;
 margin-inline-start: 60px;
 margin-block-start: 400px;
+fill: white;
 }
 
 #red{
@@ -83,34 +90,42 @@ margin-block-start: 400px;
     margin-inline-start: -160px;
     margin-inline-end: -80px;
     margin-block-end: 110px;
+    fill: red;
 }
 
 #orange{
     align-self: flex-start;
     margin-block-start: 130px;
     margin-inline-start: 140px;
+    fill: #ff6400;
 }
 
 #yellow{
     align-self: flex-start;
     margin-inline-start: -400px;
+    fill: #FFFF00;
 }
 
 #green{
     align-self: flex-start;
     margin-block-start: -50px;
+    fill: #00FF00;
+    
 }
 #blue{
     align-self: flex-start;
+    fill: blue;
 }
 #purple{
     align-self: flex-start;
     margin-inline-start: -30px;
     margin-block-start: 150px;
+    fill: #6400ff;
 }
 
 .result{
     width: 250px;
+    height: 250px;
     cursor: pointer;
     z-index: 1;
     margin: auto;
@@ -122,33 +137,6 @@ margin-block-start: 400px;
     filter: drop-shadow(2px 2px 2px #ca7f7f);
 }
 
-.result.show{
-    cursor: pointer;
-    z-index: 1;
-    margin: auto;
-    margin-left: -50px;
-    margin-block-start: -50px;
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    filter: drop-shadow(2px 2px 2px #ca7f7f);
-    background-image: url("https://img.icons8.com/ios-filled/2266EE/200/splash.png");
+#paint{
+    fill: #BC7C68;
 }
- /* paint */
- .paint-rest{
-    fill: none;
- }
-/* hex code on paint */
- .hex{
-    font-size: 50px;
-    fill: #000000;
-}
-
-.cls-1 {
-    fill: #e8108a;
-  }
-
-  .cls-2 {
-    fill: #fdeef5;
-  }
