@@ -80,7 +80,6 @@ let colors = ["red", "green", "blue"]
 // Getting the index of "(" and ")"  
 // by using the indexOf() method 
 
-
 let colorArr2 = rgb2.slice( 
 rgb2.indexOf("(") + 1,  
 rgb2.indexOf(")") 
@@ -102,6 +101,7 @@ let b2 = obj2['blue'];
 rgb2hex(r2,g2,b2);
 const result = rgb2hex(r2,g2,b2)
 console.log(rgb2hex(r2,g2,b2));
+
 event.preventDefault();
 
 return result
@@ -110,20 +110,21 @@ return result
 
 paint.addEventListener("drop", handleDrop);
 
-const result = endDrag(event);
+
 
 function handleDrop() {
   if (draggedElement) {
     let rgb2 = window
     .getComputedStyle(draggedElement)
     .getPropertyValue("fill");
-  
-  
+    const result = endDrag(event);
+
+ console.log(result);
   let colors = ["red", "green", "blue"] 
   
   // Getting the index of "(" and ")"  
   // by using the indexOf() method 
-  
+
   
   let colorArr2 = rgb2.slice( 
   rgb2.indexOf("(") + 1,  
@@ -144,17 +145,15 @@ function handleDrop() {
   let g2 = obj2['green'];
   let b2 = obj2['blue']; 
   rgb2hex(r2,g2,b2);
-  const result = rgb2hex(r2,g2,b2)
-  console.log(rgb2hex(r2,g2,b2));
   
-
     let color = window
     .getComputedStyle(draggedElement)
     .getPropertyValue("fill");
-      paint.style.fill = color;
-      console.log(paint.style.fill);
+      let paintCol = window
+      .getComputedStyle(paint)
+      .getPropertyValue("fill");
   // got code from https://www.geeksforgeeks.org/how-to-convert-rgb-color-string-into-an-object-in-javascript/
-      let rgb = paint.style.fill;
+      let rgb = paintCol;
 
       
       let colorArr = rgb.slice( 
@@ -167,19 +166,18 @@ function handleDrop() {
     colorArr.forEach((k, i) => { 
       obj[colors[i]] = k 
   }) 
-  console.log(obj);
 
   let r = obj['red'];
   let g = obj['green'];
   let b = obj['blue']; 
 
   rgb2hex(r,g,b)
-  console.log(rgb2hex(r,g,b));
-
       code.textContent = paint.style.fill;
       hCode.textContent= rgb2hex(r,g,b);
       paintHex=rgb2hex(r,g,b);
       draggedElement = null;
+
+
 
       let c1 = rgb2hex(r,g,b);
       let c2 = result;
@@ -189,7 +187,7 @@ mix_hexes(c1,c2);
 color = mix_hexes(c1,c2);
 paint.style.fill = color;
 
-hCode.textContent = rgb2hex(r2,g2,b2);
+hCode.textContent = color;
   draggedElement = null;
 
 
