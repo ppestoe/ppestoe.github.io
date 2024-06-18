@@ -27,12 +27,12 @@ body {
     font-size: 50px;
     font-family: "Roboto Slab", serif;
     margin-left: 1000px;
-    display: block;
-
+    display: flex;
+    flex-direction: column;
     padding: 10px;
     bottom: 0;
     position: absolute;
-    
+    max-width: 220px;
   }
 
   #reset {

@@ -28,6 +28,7 @@ resetBtn.addEventListener("click", resetColor);
 
 function resetColor(){
   paint.style.fill = "#BC7C68";
+  code.textContent = " ";
 }
 
 function redStartDrag() {
@@ -74,6 +75,7 @@ paint.addEventListener("drop", handleDrop);
 
 
 
+
 function handleDrop() {
   if (draggedElement) {
     const color1 = window
@@ -82,11 +84,13 @@ function handleDrop() {
   const color2 = window
   .getComputedStyle(paint)
   .getPropertyValue("fill");
-
     const mixedCol = mix_hexes(color1,color2);
       paint.style.fill = color1;
+      console.log(paint.style.fill);
+      code.textContent = paint.style.fill;
     draggedElement = null;
   }
+
 }
 
 // console.log(mix_hexes('#', '#f6ff00'));
