@@ -12,12 +12,14 @@
         <script src="script.js" defer></script>
       </head>
 <body>
-
+    <!-- preloader and pop-up page -->
     <div id="preloader"> </div>
     <div id="pop"> 
         <h1 id="pop-text">Mix your own colours!!</h1>
         <button id="close-pop"> start! </button>
     </div>
+     <!-- color blobs -->
+     <!-- because svgs do not support the drag and drop api in the same way that pngs do, I decided to use pngs for the color blobs， as much as this makes my process harder later on, it makes the drag and drop function easier to manage -->
     <div class="blob" >
         <img width="170" height="170" src="https://img.icons8.com/ios-glyphs/ff6400/200/drop-of-blood.png" alt="drop-of-blood" id="orange" draggable="true"/>
         <img width="170" height="170" src="https://img.icons8.com/ios-glyphs/ff0000/200/drop-of-blood.png" alt="drop-of-blood" id="red" draggable="true"/>
@@ -29,6 +31,7 @@
         <img width="170" height="170" src="https://img.icons8.com/ios-glyphs/0000ff/200/drop-of-blood.png" alt="drop-of-blood" id="blue" draggable="true"/>
         <img width="170" height="170" src="https://img.icons8.com/ios-glyphs/6400ff/200/drop-of-blood.png" alt="drop-of-blood" id="purple" draggable="true"/>
     </div>
+    <!-- result blob, the result blob is a svg because the result blob doesn't need to be dragged, and it would be easier to edit the fill -->
 <div class="result" draggable="false">
     <svg height="500px" width="500px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 612 612" xml:space="preserve">
@@ -49,16 +52,19 @@
 </svg>
 </div>
 
+<!-- the palette background, I drew up the palette in illustrator-->
 
     <div class="paint-palette">
         <img src="palette.png" draggable="false">
     </div>
 
+    <!-- the codes -->
 <footer>
     <span class="hexcode"></span>
     <span class="rgbcode"></span>
     <button id="reset">RESET</button>
 </footer>
 </body>
+<!-- credits -->
 <!-- <a href="https://www.vecteezy.com/free-vector/liquid-icon">Liquid Icon Vectors by Vecteezy</a> -->
 </html>

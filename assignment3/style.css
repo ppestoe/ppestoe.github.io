@@ -2,7 +2,7 @@
     --main-text-color: #fff;
     
   }
-
+/* styling for body */
 body {
     background-color: #241826;
     display: flex;
@@ -34,7 +34,7 @@ body {
     position: absolute;
     max-width: 220px;
   }
-
+/* reset button styling */
   #reset {
     background-color: #241826;
     border-radius: 15%;
@@ -42,19 +42,19 @@ body {
     filter: drop-shadow(3px 5px 2px #07041b);
     border: 10px double rgb(239, 237, 205);
   }
-
+/* button getting bigger on hover for feedback */
   #reset:hover {
    width: 200px ;
    height: 100px;
   }
 
   
-  /* hex display, set to none on default*/
+  /* hex and rgb code display */
 .hexcode{
     font-size: 30px;
     filter: drop-shadow(3px 5px 2px #53489d);
 
-    /* display: none; */
+  
 }
 .rgbcode{
   font-size: 25px;
@@ -138,7 +138,7 @@ fill: #FFFFFF;
     margin-block-start: 150px;
     fill: #6400ff;
 }
-
+/* box that stores the middle paint blob */
 .result{
     width: 250px;
     height: 250px;
@@ -152,12 +152,12 @@ fill: #FFFFFF;
     justify-content: center;
     filter: drop-shadow(2px 2px 2px #ca7f7f);
 }
-
+/* fill for the middle blob */
 #paint{
     color: #ffffff00;
   }
 
-  /* https://lottiefiles.com/ */
+  /* preloader gif from https://lottiefiles.com/ */
 #preloader {
   background: #000 url(img/load.gif) no-repeat center center;
   height: 100vh;
@@ -165,7 +165,7 @@ fill: #FFFFFF;
   position: fixed;
   z-index: 100;
 }
-
+/* styling for the popup page */
 #pop {
   background: #1a0a32c4;
   height: 100vh;
@@ -181,9 +181,8 @@ fill: #FFFFFF;
   position: relative;
   margin-top: 15%;
   filter: drop-shadow(4px 4px 4px  #18051c);
-
 }
-
+/* styling for the closing popup button */
 #close-pop {
   cursor: pointer;
   background: rgba(142, 103, 172, 0.267);
@@ -196,7 +195,7 @@ fill: #FFFFFF;
 width: 280px;
 height: 160px;
 }
-
+/* font from google fonts */
 .roboto-slab {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
